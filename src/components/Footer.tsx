@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FaGithub,
   FaTwitter,
@@ -7,19 +7,19 @@ import {
   FaArrowRight,
   FaEnvelope,
   FaInfoCircle,
-  FaShieldAlt, // ✅ Added Privacy Icon
-} from 'react-icons/fa';
+  FaShieldAlt,
+} from "react-icons/fa";
 
 function Footer() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Replace with API call
-    alert('Thank you for subscribing!');
+    alert("Thank you for subscribing!");
 
-    setEmail('');
+    setEmail("");
   };
 
   return (
@@ -37,7 +37,6 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-8 pt-16 pb-10 relative z-10">
         {/* Upper Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-zinc-200 dark:border-zinc-800/60">
-
           {/* Brand */}
           <div className="lg:col-span-5 flex flex-col space-y-4">
             <Link
@@ -82,7 +81,7 @@ function Footer() {
                 About
               </Link>
 
-              {/* ✅ New Privacy Policy link integration */}
+              {/* Privacy Policy Link */}
               <Link
                 to="/privacy"
                 className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
@@ -144,12 +143,12 @@ function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6">
-
           {/* Copyright */}
           <div className="text-center md:text-left text-gray-600 dark:text-gray-400">
             <p className="text-xs md:text-sm font-semibold">
-              &copy; {new Date().getFullYear()}{' '}
-              <span className="font-semibold">GitHub Tracker</span>. All rights reserved.
+              &copy; {new Date().getFullYear()}{" "}
+              <span className="font-semibold">GitHub Tracker</span>. All rights
+              reserved.
             </p>
           </div>
 
